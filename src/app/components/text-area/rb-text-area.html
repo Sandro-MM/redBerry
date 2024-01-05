@@ -1,0 +1,16 @@
+<div
+  class="inputelement">
+  <label>{{label}}</label>
+  <input
+    pInputText
+    class="input"
+    [disabled]='inputDisabled'
+    [(ngModel)]='value'
+    (ngModelChange)='updateChanges()'
+    placeholder="{{placeholder?(required? '*':'') + placeholder:''}}"
+    [ngClass]="{'ng-invalid ng-dirty': control?.invalid && control?.dirty}"
+  />
+  @for(i of this.validation; track i.id){
+  <div [ngClass]="{'error-color': control?.invalid && control?.dirty && control?.hasError(i.errorCode)}">{{i.text}}</div>
+  }
+</div>

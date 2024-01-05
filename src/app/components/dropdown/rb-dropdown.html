@@ -1,0 +1,14 @@
+<div
+  class="inputelement">
+  <label>{{label}}</label>
+  <p-calendar
+    [minDate]="minDate"
+    [(ngModel)]="value"
+    (ngModelChange)='updateChanges()'
+    [ngClass]="{'ng-invalid ng-dirty': control?.invalid && control?.dirty}"
+    [iconDisplay]="'input'"
+    [showIcon]="true" inputId="templatedisplay"/>
+  @for(i of this.validation; track i.id){
+  <div [ngClass]="{'error-color': control?.invalid && control?.dirty && control?.hasError(i.errorCode),'validated':!control?.hasError(i.errorCode) && control?.dirty && control?.value}">{{i.text}}</div>
+  }
+</div>

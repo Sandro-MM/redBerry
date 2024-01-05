@@ -1,0 +1,19 @@
+.blog_title_area{
+  padding: 90px;
+  display:flex;
+  justify-content:space-between;
+}
+h1{
+  font-size:64px;
+}
+.blog{
+  width:100%;
+}
+.blog-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+}
+

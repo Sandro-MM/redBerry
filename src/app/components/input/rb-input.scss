@@ -1,0 +1,49 @@
+//!important აქვს იმიტომ რომ როცა type-ვაწოდებ აღარ მუშაობს პროპერთი
+.input {
+  font-family: 'Imprima', sans-serif !important;
+  font-weight: 600;
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  min-width: 416px;
+  width: 100% !important;
+  padding: 1em !important;
+  margin: 0.5em !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  border: 2px solid #FFFFFF !important;
+}
+@media (max-width:859px){
+.input{
+  min-width: 150px;
+  width: 100%;
+}
+}
+//ეს ინპუტის შიდა ტექსტს აწითლებს
+.error-color{
+  color: red !important;
+}
+//ეს ინპუტის პლეისჰოლდერს
+.error-color::placeholder {
+  color: red !important;
+}
+//ეს ჰოვერზე ერორ მესიჯი ჩანს
+input:hover + .warning{
+  display: block;
+}
+//ერორ მესიჯის სტილი
+.warning{
+  z-index: 30;
+  padding-left: 10px;
+  display: none;
+  padding-top: 3px;
+  margin-top: -8px;
+  margin-left: 7px;
+  position: absolute;
+  width: 320px;
+  height: 22px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #ff4747;
+  color: #fff;
+}

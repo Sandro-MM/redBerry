@@ -1,0 +1,36 @@
+<div class="blog">
+  <div class="post">
+    <div class="item">
+      <div>
+        <div class="img-container">
+          <div class="img-wrapper" [style.backgroundImage]="'url(' + postData.image + ')'" [style.backgroundSize]="'cover'"></div>
+        </div>
+        <div>
+          <div class="text-truncate author">{{ postData.author}}</div>
+          <h6>{{ postData.publish_date}} {{postData.email}}</h6>
+          <div class="text-truncate title">{{ postData.title }}</div>
+          <div class="category_area">
+            @for( x of postData.categories; track x.id) {
+            <div class="category" [style]="{ 'color': x.text_color, 'background-color': x.background_color }">
+            {{ x.title }}
+            </div>
+            }
+          </div>
+          <div class='text-truncate desc'>{{ postData.description }}</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@if(load){
+<div class="slider_area">
+<rb-slider
+[postData]="postData"
+[carouselData]="sliderData"></rb-slider>
+</div>
+}
+
+
+
+

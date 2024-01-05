@@ -1,0 +1,14 @@
+<div
+  class="inputelement">
+  <label
+    *ngIf='label'
+    [for]='id'
+  >{{label}}</label>
+<input
+  class="input"
+  [(ngModel)]='value'
+  (ngModelChange)='updateChanges()'
+  placeholder="{{placeholder?(required? '*':'') + placeholder:''}}"
+  [ngClass]="{'error-color': control?.invalid && control?.dirty}"
+/>
+</div>

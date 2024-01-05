@@ -1,0 +1,6 @@
+@for( x of data.data; track x.id) {
+  <div class="category" [style]="{ 'color': x.text_color, 'background-color': x.background_color }">
+    {{ x.title }}
+  </div>
+}
+

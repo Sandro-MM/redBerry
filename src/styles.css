@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/mdc-light-indigo/theme.css';
+@import 'primeng/resources/primeng.min.css';
+
+:host ::ng-deep {
+  .p-carousel-prev{
+    margin-top: -720px;
+    margin-left: 1200px;
+    position: absolute;
+    background-color: #5D37F3;
+  }
+  .p-carousel-next{
+    margin-top: -720px;
+    margin-left: 1260px;
+    position: absolute;
+    background-color: #5D37F3;
+  }
+  .p-highlight{
+    .p-link{
+      background-color: #5D37F3;
+    }
+  }
+  .p-multiselect-header{
+    display:none;
+  }
+  .p-multiselect-token{
+    background: green;
+  }
+  .p-multiselect-label-container{
+    width: 100%
+  }
+  .ng-star-inserted{
+
+  }
+  .p-fileupload-buttonbar{
+    border:none;
+  }
+  .p-fileupload-content{
+    border-radius: 12px;
+    height: 180px;
+    border: 1px #85858D dashed;
+    background-color: #F4F3FF;
+  }
+  .p-fileupload-choose{
+    display:inline-block;
+    z-index:5;
+    top:290px;
+    transform: translate(-50%, -50%);
+    left:50%;
+    position: absolute;
+    background: transparent;
+    color: black;
+    text-decoration: none;
+  }
+  .p-fileupload-choose::after{
+    content:'Choose File';
+    z-index:5;
+    background: transparent;
+    color: black;
+    text-decoration: underline;
+  }
+  .p-fileupload-files{
+    width:580px;
+    height:130px;
+    top:10px;
+    position: absolute;
+    background:#F4F3FF;
+    z-index:6;
+  }
+  .p-message-error{
+    width:580px;
+    height:130px;
+    position: absolute;
+    top:20px;
+    z-index:6;
+  }
+}
